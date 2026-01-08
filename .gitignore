@@ -14,8 +14,16 @@ dist/
 .cache/
 .pnp
 .pnp.js
-yarn-error.log*
 npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# =====================
+# Lock files
+# =====================
+yarn.lock
+frontend/yarn.lock
 
 # =====================
 # Environment files
@@ -24,7 +32,7 @@ npm-debug.log*
 .env.local
 .env.production
 .env.development
-
+frontend/.env
 *token.json*
 *credentials.json*
 
@@ -33,20 +41,23 @@ npm-debug.log*
 # =====================
 __pycache__/
 *.pyc
+*.pyo
+*.pyd
 venv/
 .venv/
 
 # =====================
 # Logs & Debug
 # =====================
-dump.rdb
 *.log
+dump.rdb
 
 # =====================
 # System files
 # =====================
 .DS_Store
 Thumbs.db
+desktop.ini
 *.pem
 
 # =====================
@@ -61,18 +72,4 @@ coverage/
 *.tar
 *.tar.gz
 *.tgz
-# Environment files
-.env
-frontend/.env
-
-# Lock files (ignore yarn)
-yarn.lock
-frontend/yarn.lock
-
-# Dependencies
-node_modules/
-frontend/node_modules/
-
-# Virtual env
-venv/
-.venv/
+frontend/node_modules/.cache/default-development/0.pack
