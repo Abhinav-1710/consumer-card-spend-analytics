@@ -220,6 +220,12 @@ logging.basicConfig(
 )
 logger = logging.getLogger(__name__)
 
+@app.on_event("startup")
+async def startup_event():
+    """Load analytics data on startup"""
+    load_analytics_data()
+    logger.info("Analytics data loaded successfully")
+
 @app.on_event("shutdown")
 async def shutdown_db_client():
     client.close()
